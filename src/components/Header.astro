@@ -2,23 +2,116 @@
 let title = 'RobotLab'
 ---
 <header>
-    <div>
-        <h1 class="title">{title}</h1>
+    <div class="header-container">
+      <div class="title">{title}</div>
+      <div class="menu_apartado">
+        <nav class="menu">
+          <ul class="menu-items">
+            <li><a href="#Informacion" >Proyecto</a></li>
+            <li><a href="#" >Laboratorio</a></li>
+            <li><a href="#" >Modelo</a></li>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="help-icon">
+        <a href="#" class="help-icon-link">
+          <span class="material-symbols-outlined">
+            help_center
+            </span>
+      </div>
     </div>
-</header>
+  </header>
 <style>
     header {
+        position: fixed;
         display: flex;
-        justify-content: center;
-        align-items: center;
         width: 100%;
-        height: 100px;
+        height: 10%;
         background-color: black;
         color: white;
 
     }
+    .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+    text-decoration: none;
+    width: 100%
+  }
 
     .title {
-        font-size: 2em;
+        display: flex;
+    font-size: 200%;
+    font-weight: bold;
+    width: 20%;
+    height: 100%;
+    align-items: center;
+    text-align: left;
+    padding-left: 2.5%;
+
+  }
+  .menu_apartado {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    text-decoration: none;
+
+  }
+  .menu-items {
+    display: flex;
+    gap: 25%;
+    justify-content: center;
+    margin-top:10%;
+  }
+  .menu-items li {
+    list-style: none;
+    color: black;
+    width: 50%;
+    text-decoration: none;
+  }
+
+  .menu-items li a {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+  }
+
+
+  @media (max-width: 600px) {
+    .title {
+      width: 100%;
+      text-align: center;
     }
+    .header-container {
+      flex-direction: column;
+    }
+    .menu-items {
+      flex-direction: column;
+      align-items: rigth;
+    }
+    menu.menut-items li a {
+    font-size: 2em;
+    font-weight: bolder;
+    color: black;
+    text-decoration: none;
+  }
+  }
+
+    .help-icon {
+        width: 20%;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        text-decoration: none;
+        margin-right: 2.5%;
+    }
+    .help-icon-link {
+        color: white;
+        text-decoration: none;
+    }
+
+ 
 </style>
